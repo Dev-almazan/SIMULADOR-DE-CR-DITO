@@ -19,17 +19,18 @@
 </head>
 
 <body>
+    
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon text-light" style="color: white;"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Bienvendido</a>
+                <a class="nav-link" href="#">BIENVENIDO</a>
             </li>
      
         </ul>
@@ -39,11 +40,11 @@
 
     <main role="main" class="container" style="padding-top: 16%; background-color: ghostwhite; ">
 
-        <h1>Simulador de  crédito</h1>
+        <h1>Simulador de  crédito</h1><hr><br>
             <div class="row" id="solicitud">
                 
                 
-        <div class="col-md">
+        <div class="col-md ">
         <label>Importe de crédito a solicitar</label>
         <input type="number"  class="form-control"  id="valora"  value="5000" min="5000"  max="100000" />
         </div>   
@@ -62,7 +63,7 @@
 
                     <div class="col-md"><br> 
                         <p>La tasa de interes promedio es del <span class ="text-primary">3.5% </span>mensual. </p>
-                                <h6 >Tu crédito seria por $ <span id="resultado" class="text-success"></span> pesos<br> y lo estarias pagando por <span id="meses" class="text-success"></span> meses. <br> con un pago  mensual de $ <span id="mensualidades" class="text-success">  </span> pesos mexicanos</h6>
+                                <h6 >Tu crédito seria por $ <span id="resultado" class="text-primary"></span> pesos<br> y lo estarias pagando por <span id="meses" class="text-primary"></span> meses. <br> con un pago  mensual de $ <span id="mensualidades" class="text-primary">  </span> pesos mexicanos</h6>
                             <center>
                             
                             <button type="submit"  class="btn btn-primary">Solicitar crédito ahora</button>    
@@ -125,6 +126,18 @@ document.getElementById("mensualidades").innerHTML =cmen;
 
 
 </script>
+    
+    <style>
+    .text-primary
+        {
+           font-weight: 600; 
+            
+        }
+        *{
+            font-family: sans-serif;
+        }
+    
+    </style>
     <!-- /.container -->
 
     <!-- Bootstrap core JavaScript
