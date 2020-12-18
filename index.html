@@ -46,12 +46,13 @@
                 
         <div class="col-md ">
         <label>Importe de crédito a solicitar</label>
-        <input type="number"  class="form-control"  id="valora"  value="5000" min="5000"  max="100000" />
+        <input type="number"  class="form-control"  id="valora"   min="5000"  max="100000" />
+        <small>* Ingrese importe de crédito</small>
         </div>   
         <div class="col-md">
             <label>Plazo de crédito</label>   
            <select class="form-control" id="valorb"   >
-            <option value="0"> SELECCIONE </option>
+            <option value="0"  >- Selecciona -</option>
                     <option value="3">3 MESES</option>
                     <option value="6">6 MESES </option>
                     <option value="9">9 MESES</option>
@@ -59,11 +60,12 @@
                     <option value="24">24 MESES</option>
                     <option value="36">36 MESES</option>
            </select> 
+           <small>* Ingrese plazo de crédito</small>
                     </div>  <br> 
 
-                    <div class="col-md"><br> 
-                        <p>La tasa de interes promedio es del <span class ="text-primary">3.5% </span>mensual. </p>
-                                <h6 >Tu crédito seria por $ <span id="resultado" class="text-primary"></span> pesos<br> y lo estarias pagando por <span id="meses" class="text-primary"></span> meses. <br> con un pago  mensual de $ <span id="mensualidades" class="text-primary">  </span> pesos mexicanos</h6>
+                    <div class="col-md" ><br> 
+                        <p >La tasa de interes promedio es del <span class ="text-primary">3.5% </span>mensual. </p>
+                                <h6 id="info" style="display: none;">Tu crédito seria por $ <span id="resultado" class="text-primary"></span> pesos<br> y lo estarias pagando por <span id="meses" class="text-primary"></span> meses. <br> con un pago  mensual de $ <span id="mensualidades" class="text-primary">  </span> pesos mexicanos</h6>
                             <center>
                             
                             <button type="submit"  class="btn btn-primary">Solicitar crédito ahora</button>    
@@ -73,59 +75,13 @@
                 </div>
         
         
-<hr>
+<hr><br><br>
 
     </main>
     
 
 
-    <script language="JavaScript">
 
-var soli = document.getElementById("solicitud");
-
-soli.addEventListener("input",() =>
-{
-
-   // IMPORTE DE CREDITO  
-var valora = document.getElementById("valora").value;
-
-   // MESES   
-var valorb = document.getElementById("valorb").value;
-
-// TASA DE INTERES TOTAL    
-var interes = 3.5 * parseFloat(valorb) ;
-
-// IMPORTE DE  INTERES TOTAL    
-
-var reinteres =  parseFloat(valora)  * interes / 100 ;
-
-// RESULTADO SUMA DE  INTERES TOTAL  + LA CANTIDA A SOLICITAR  
-
-var resultados = parseFloat(reinteres) + parseFloat(valora) ;
-
-// IMPORTE DE MENSUALIDADES A PAGAR   
-
-var mensualidad =  resultados / valorb;
-
-// CAMBIAR VARIABLES A MONEDA
-    
- var result = (new Intl.NumberFormat().format(resultados)) ;   
- 
- var cmen = (new Intl.NumberFormat().format(mensualidad)) ;
- 
- // LLEVAR VARIABLES DE ACUERDO A CADA ID
-
-document.getElementById("resultado").innerHTML =result;
-
-document.getElementById("meses").innerHTML =valorb;
-    
-document.getElementById("mensualidades").innerHTML =cmen;    
-
-}
-)
-
-
-</script>
     
     <style>
     .text-primary
@@ -145,6 +101,6 @@ document.getElementById("mensualidades").innerHTML =cmen;
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="JS/logica.js"></script>
 </body>
 </html>
