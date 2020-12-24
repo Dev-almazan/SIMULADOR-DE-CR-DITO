@@ -48,11 +48,11 @@ var mensualidad =  resultados / valorb;
 // si no hay resultado entonces marcar error    
 
 
-// CAMBIAR VARIABLES A MONEDA
+// CAMBIAR VARIABLES A MONEDA    
     
- var result = (new Intl.NumberFormat().format(resultados)) ;   
+ var result = (resultados.toFixed(2)) ;   
  
- var cmen = (new Intl.NumberFormat().format(mensualidad)) ;
+ var cmen = (mensualidad.toFixed(2)) ;   
  
  // LLEVAR VARIABLES DE ACUERDO A CADA ID
 

@@ -8,83 +8,100 @@
     <meta name="author" content="ERNESTO ALMAZAN RESENDIZ">
     <link rel="icon" href="../../../../favicon.ico">
     <title>SIMULADOR DE CREDITO</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/2.2.1/mdb.min.css"
-  rel="stylesheet"
-/>
+    
+    <link rel="stylesheet"  href="css/estilo.css">
     
 </head>
 
-<body>
-    
+<body class="bg-gradient-light">
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon text-light" style="color: white;"></span>
-    </button>
+  <div class="container">
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">BIENVENIDO</a>
-            </li>
-     
-        </ul>
-    
-    </div>
-</nav>
+   
+    <div class="row justify-content-center">
 
-    <main role="main" class="container" style="padding-top: 16%; background-color: ghostwhite; ">
+      <div class="col-xl-10 col-lg-12 col-md-9">
 
-        <h1>Simulador de  crédito</h1><hr><br>
-            <div class="row" id="solicitud">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+      
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image">
                 
                 
+                </div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                <h2 class="text-center text-success">Solicita tu  crédito</h2><hr>
+                  <small class="text-center" >La tasa de interes promedio es del <span class ="text-success">3.5% </span>mensual. </small><br>    
+            <div id="solicitud">
+                
+              <div class="col-md"><br>
+            <label>Plazo de crédito</label>   
+           <select class="form-control" id="valorb"   >
+            <option value="1"  >- Selecciona -</option>
+                    <option value="3">3 MESES</option>
+                    <option value="6">6 MESES </option>
+                    <option value="9">9 MESES</option>
+                    <option value="12">12 MESES</option>
+                <option value="18">18 MESES</option>
+                    <option value="24">24 MESES</option>
+                    <option value="36">36 MESES</option>
+           </select> 
+           <small>* Ingrese plazo de crédito</small>
+                    </div>  <br>   
         <div class="col-md ">
         <label>Importe de crédito a solicitar</label>
         <input type="number"  class="form-control"  id="valora"   min="5000"  max="100000" />
         <small>* Ingrese importe de crédito</small>
         </div>   
-        <div class="col-md">
-            <label>Plazo de crédito</label>   
-           <select class="form-control" id="valorb"   >
-            <option value="0"  >- Selecciona -</option>
-                    <option value="3">3 MESES</option>
-                    <option value="6">6 MESES </option>
-                    <option value="9">9 MESES</option>
-                    <option value="12">12 MESES</option>
-                    <option value="24">24 MESES</option>
-                    <option value="36">36 MESES</option>
-           </select> 
-           <small>* Ingrese plazo de crédito</small>
-                    </div>  <br> 
-
-                    <div class="col-md" ><br> 
-                        <p >La tasa de interes promedio es del <span class ="text-primary">3.5% </span>mensual. </p>
-                                <h6 id="info" style="display: none;">Tu crédito seria por $ <span id="resultado" class="text-primary"></span> pesos<br> y lo estarias pagando por <span id="meses" class="text-primary"></span> meses. <br> con un pago  mensual de $ <span id="mensualidades" class="text-primary">  </span> pesos mexicanos</h6>
-                            <center>
-                            
-                            <button type="submit"  class="btn btn-primary">Solicitar crédito ahora</button>    
-                            </center>
-                        
+  
                         </div>
                 </div>
-        
-        
-<hr><br><br>
+                      <div id="info" style="display: none;" class="contenido">
+                 
+                 
+                <p class="text-center">Tu crédito seria por  $ <span id="resultado" class="text-success"></span> pesos </p>
+                        
+                <p class="text-center">Con un pago  mensual de $ <span id="mensualidades" class="text-success">  </span> pesos mexicanos </p>
+                          
+                <p class="text-center">A un plazo de <span id="meses" class="text-success"></span> meses. </p>
+                            
+                 <center>        
+                <button type="submit"  class="btn btn-success">Solicitar crédito ahora</button> <hr>   
+                </center>
+                            </div> 
+                </div>
+                  
+            
+        </div>
 
-    </main>
+                         
+              
+              
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+
+</body>
+
     
-
 
 
     
     <style>
-    .text-primary
+    .text-success
         {
            font-weight: 600; 
             
@@ -92,7 +109,7 @@
         *{
             font-family: sans-serif;
         }
-    
+      
     </style>
     <!-- /.container -->
 
